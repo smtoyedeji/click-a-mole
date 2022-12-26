@@ -1,12 +1,15 @@
 import { useState } from 'react';
 import MoleContainer from './MoleContainer';
 import styled from 'styled-components';
+import StartGame from './StartGame';
 
 
 function App() {
 
   let [score, setScore] = useState(0)
+  let [start, setStart] = useState(false)
 
+  
   const createMoleHill = () => {
     let hills = [];
     for (let i = 0; i < 6; i++) {
@@ -27,11 +30,15 @@ function App() {
   }
   return (
     <Container className="App">
-      <h1>Click-a-Mole!</h1>
-      <b>{score}</b>
-      <Game>
-        {createMoleHill()}
-      </Game>
+      {start && <div>
+        <h1>Click-a-Mole!</h1>
+        <b>{score}</b>
+        <Game>
+          {createMoleHill()}
+        </Game>
+      </div>}
+
+      {!start && <StartGame setStart={setStart} />}
     </Container>
   );
 }
