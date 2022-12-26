@@ -21,8 +21,8 @@ function EmptySlot(props) {
 export default EmptySlot
 
 const MoleHill = styled.div`
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
 
     img {
         height: 100%;

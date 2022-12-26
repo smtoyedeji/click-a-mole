@@ -13,17 +13,17 @@ function Mole(props){
     })
     
     return (
-        <MoleContainer>
+        <Moles>
             <img src={mole} alt="Mole" onClick={props.moleClicked}/>
-        </MoleContainer>
+        </Moles>
     )
 }
 
 export default Mole
 
-const MoleContainer = styled.div`
-    height: 200px;
-    width: 200px;
+const Moles = styled.div`
+    height: 150px;
+    width: 150px;
 
     img {
         height: 100%;
