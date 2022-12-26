@@ -27,5 +27,6 @@ const MoleHill = styled.div`
     img {
         height: 100%;
         width: 100%;
+        cursor: pointer;
     }
 `
